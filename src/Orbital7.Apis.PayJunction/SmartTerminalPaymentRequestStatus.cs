@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Orbital7.PayJunctionApi
+namespace Orbital7.Apis.PayJunction
 {
     public class SmartTerminalPaymentRequestStatus
     {

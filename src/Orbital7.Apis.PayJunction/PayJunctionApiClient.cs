@@ -6,21 +6,21 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Orbital7.PayJunctionApi
+namespace Orbital7.Apis.PayJunction
 {
     public class PayJunctionApiClient
     {
-        public PayJunctionServer Server { get; set; }
+        public PayJunctionServer Server { get; private set; }
 
-        public string ApiUsername { get; set; }
+        private string ApiUsername { get; set; }
 
-        public string ApiPassword { get; set; }
+        private string ApiPassword { get; set; }
 
-        public string ApplicationKey { get; set; }
+        private string ApplicationKey { get; set; }
 
         public bool ValidateTransactionResultSuccess { get; set; }
 
-        public string ApiBaseUrl => this.Server == PayJunctionServer.Development ? 
+        private string ApiBaseUrl => this.Server == PayJunctionServer.Development ? 
             "https://api.payjunctionlabs.com" : "https://api.payjunction.com";
 
         public PayJunctionApiClient(
